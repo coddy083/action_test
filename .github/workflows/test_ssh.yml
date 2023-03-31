@@ -2,7 +2,8 @@ name: cron test
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    //매분마다
+    - cron: '*/1 * * * *'
 
 # on:
 #   push:

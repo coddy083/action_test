@@ -1,0 +1,14 @@
+name: cron test
+
+on:
+  schedule:
+    #매분 마다 실행가능?
+    - cron: ' * * * * * '
+
+jobs:
+  cron_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Echo
+        run: echo  " Hello World! "

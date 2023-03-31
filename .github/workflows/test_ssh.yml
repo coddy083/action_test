@@ -16,4 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Echo
-        run: echo  " Hello World! "
+        run: curl -X GET http://49.247.47.252:8090/gong9-check

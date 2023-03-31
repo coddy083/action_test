@@ -1,9 +1,14 @@
 name: cron test
 
+# on:
+#   schedule:
+#     #매분 마다 실행가능?
+#     - cron: ' * * * * * '
+
 on:
-  schedule:
-    #매분 마다 실행가능?
-    - cron: ' * * * * * '
+  push:
+    branches:
+      - master
 
 jobs:
   cron_test:

@@ -1,19 +1,19 @@
 name: cron test
 
-# on:
-#   schedule:
-#     #매분 마다 실행가능?
-#     - cron: ' * * * * * '
-
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    #매분 마다 실행가능?
+    - cron: " * * * * * "
+
+# on:
+#   push:
+#     branches:
+#       - master
 
 jobs:
   cron_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Echo
+      - name: gong9-check
         run: curl -X GET http://49.247.47.252:8090/gong9-check
